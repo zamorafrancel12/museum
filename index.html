@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Museum Exhibit</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;600&display=swap');
+        
+        body {
+            background-color: #f5f3eb;
+            font-family: 'Raleway', sans-serif;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            padding: 20px;
+        }
+        .frame {
+            border: 10px solid #8b6f47;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+        }
+        .frame img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        header {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center p-6 bg-gray-800 text-white text-7xl">Virtual Museum</header>
+    <div class="gallery">
+        <div class="frame">
+            <img src="art1.jpg" alt="Artwork 1">
+            <p>Title: Masterpiece One</p>
+        </div>
+        <div class="frame">
+            <img src="art2.jpg" alt="Artwork 2">
+            <p>Title: Timeless Beauty</p>
+        </div>
+        <div class="frame">
+            <img src="art3.jpg" alt="Artwork 3">
+            <p>Title: Majestic Mirror</p>
+        </div>
+        <div class="frame">
+          <img src="art4.jpg" alt="Artwork 4">
+          <p>Title: Masterpiece One</p>
+      </div>
+      <div class="frame">
+          <img src="art5.jpg" alt="Artwork 5">
+          <p>Title: Timeless Beauty</p>
+      </div>
+      <div class="frame">
+          <img src="art6.jpg" alt="Artwork 6">
+          <p>Title: Majestic Mirror</p>
+      </div>
+      <div class="frame">
+        <img src="art7.jpg" alt="Artwork 7">
+        <p>Title: Majestic Mirror</p>
+    </div>
+    <div class="frame">
+      <img src="art8.jpg" alt="Artwork 8">
+      <p>Title: Majestic Mirror</p>
+  </div>
+  <div class="frame">
+    <img src="art9.jpg" alt="Artwork 9">
+    <p>Title: Majestic Mirror</p>
+</div>
+<div class="frame">
+  <img src="art10.jpg" alt="Artwork 10">
+  <p>Title: Majestic Mirror</p>
+</div>
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+            .then(reg => console.log('Service Worker Registered', reg))
+            .catch(err => console.log('Service Worker Registration Failed', err));
+        }
+    </script>
+</body>
+</html>
